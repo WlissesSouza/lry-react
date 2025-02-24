@@ -843,7 +843,7 @@
             return pageNumber + ' registros por página';
         },
         formatShowingRows: function (pageFrom, pageTo, totalRows) {
-            return 'Exibindo ' + pageFrom + ' até ' + pageTo + ' de ' + totalRows + ' linhas';
+            return 'Exibindo ss' + pageFrom + ' até ' + pageTo + ' de ' + totalRows + ' linhas';
         },
         formatSearch: function () { 
             return 'Pesquisar';

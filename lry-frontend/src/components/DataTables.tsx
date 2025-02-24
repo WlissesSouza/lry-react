@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import $ from "jquery";
 import "datatables.net";
+import 'bootstrap';
 
 // Define a interface das propriedades do componente
 interface ConsultasTableProps {
@@ -68,22 +69,34 @@ const ConsultasTable: React.FC<ConsultasTableProps> = ({ searchText }) => {
     {
       title: "Ações",
       orderable: false,
-      render: () => `
-        <div class="text-nowrap text-right">
-          <div class="dropdown">
-            <a href="#" class="dropdown-toggle text-dark i-dropdown table-dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-ellipsis-v"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#">Editar</a>
-              <a class="dropdown-item" href="#">Detalhar</a>
-              <a class="dropdown-item" href="#">Atualizar</a>
-              <a class="dropdown-item" href="#">Excluir</a>
+      render: (data: any, type: any, row: any) => {
+        const id = row.id; // Obtenha o ID da linha
+        return `
+          <div class="text-nowrap text-right position-relative">
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle text-dark i-dropdown table-dropdown-toggle" id="dropdownMenuLink${id}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-ellipsis-v"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right position-absolute" style="min-width: 15rem!important; top: -100%; left: -50%; transform: translateY(-100%); z-index: 1050;" aria-labelledby="dropdownMenuLink${id}">
+                <a class="dropdown-item pl-2" href="#" onclick="alert('Editar, ID: ${id}'); $('#dropdownMenuLink${id}').dropdown('hide');" data-toggle="tooltip" title="Editar">
+                  Editar <i class="fa fa-pencil text-primary pull-right"></i>
+                </a>
+                <a class="dropdown-item pl-2" href="#" onclick="alert('Detalhar, ID: ${id}'); $('#dropdownMenuLink${id}').dropdown('hide');" data-toggle="tooltip" title="Detalhar consulta">
+                  Detalhar consulta <i class="fa fa-eye text-primary pull-right"></i>
+                </a>
+                <a class="dropdown-item pl-2" href="#" onclick="alert('Atualizar, ID: ${id}'); $('#dropdownMenuLink${id}').dropdown('hide');" data-toggle="tooltip" title="Atualizar">
+                  Atualizar <i class="fa fa-refresh text-info pull-right"></i>
+                </a>
+                <a class="dropdown-item confirm_delete pl-2" href="#" onclick="alert('Excluir, ID: ${id}'); $('#dropdownMenuLink${id}').dropdown('hide');" data-toggle="tooltip" title="Excluir">
+                  Excluir <i class="fa fa-trash text-primary pull-right"></i>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      `,
-    },
+        `;
+      },
+    }
+        
   ];
 
   // Inicializa tabelas
@@ -170,8 +183,8 @@ const ConsultasTable: React.FC<ConsultasTableProps> = ({ searchText }) => {
   return (
     <div className="tab-content mt-3">
       <div className="tab-pane fade show active" id="my-filters">
-        <div className="table-responsive mt-3" style={{ overflowX: "hidden" }}>
-          <table ref={tableRef1} className="table table-bordered datatable w-100 mb-2">
+        <div className="table-responsive mt-3" style={{ overflowX: "hidden", height:" 90vH"}}>
+          <table ref={tableRef1} className="table table-bordered datatable w-100 mb-2" >
             <thead className="bg-lighter">
               <tr>
                 <th>Título da consulta</th>
@@ -187,7 +200,7 @@ const ConsultasTable: React.FC<ConsultasTableProps> = ({ searchText }) => {
       </div>
 
       <div className="tab-pane fade" id="shared-filters">
-        <div className="table-responsive mt-3" style={{ overflowX: "hidden" }}>
+        <div className="table-responsive mt-3" style={{ overflowX: "hidden", height:" 90vH" }}>
           <table ref={tableRef2} className="table table-bordered datatable w-100 mb-2">
             <thead className="bg-lighter">
               <tr>

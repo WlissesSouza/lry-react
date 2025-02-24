@@ -1866,7 +1866,7 @@ pre {
 
 .select2-selection.select2-selection--multiple{
     overflow-y: auto !important;
-    overflow-x: hidden !important;
+    overflow-x: hidden!important;
 }
 
 .table-responsive {
@@ -2974,6 +2974,8 @@ ul.common li a:hover {
     background-image: none !important; /* Remove qualquer imagem de fundo */
     color: #0F3B54 !important; /* Texto azul escuro */
     border: 1px solid #ADADAD !important; /* Borda cinza */
+    height:50px;
+
 }
 
 /* Quando o mouse passa sobre os botões de navegação (exceto o da página atual e desativados) */

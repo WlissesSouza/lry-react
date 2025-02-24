@@ -13,6 +13,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "axios": "^1.7.9",
+    "bootstrap": "^4.6.2",
     "datatables.net-buttons": "^3.2.2",
     "datatables.net-responsive": "^3.0.4",
     "jquery": "^3.7.1",

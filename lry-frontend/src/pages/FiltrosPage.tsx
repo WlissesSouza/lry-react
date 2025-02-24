@@ -20,10 +20,10 @@ const ConsultaList: React.FC = () => {
   };
 
   return (
-    <div className="row p-3">
+    <div className="row p-3 h-100" style={{height:" 90vH"}}>
       <div className="col-sm-12" >
         <div className="panel bg-transparent">
-          <div className="panel-body p-t-0">
+          <div className="panel-body p-t-0" style={{height:" 90vH"}}>
             <div className="row">
               <div className="col-12">
                 <ul className="nav nav-tabs" role="tablist">
