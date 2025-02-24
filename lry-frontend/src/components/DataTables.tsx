@@ -64,8 +64,19 @@ const ConsultasTable: React.FC<ConsultasTableProps> = ({ searchText }) => {
     {
       data: "ultima_execucao",
       title: "Última Atualização",
-      render: (data: string) => new Date(data).toLocaleString(),
-    },
+      render: (data: string) => {
+        const options: Intl.DateTimeFormatOptions = {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: false, // Define se deve usar formato de 12 ou 24 horas
+        };
+        return new Date(data).toLocaleString('pt-BR', options);
+      },
+    }
+    ,
     {
       title: "Ações",
       orderable: false,

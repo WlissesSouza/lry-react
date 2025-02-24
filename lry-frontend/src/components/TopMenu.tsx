@@ -25,7 +25,7 @@ const Navbar: React.FC<NavbarProps> = ({ showBackButton }) => {
           </div>
           <div className="top-center-part">
             {/* Logo Lyra com link */}
-            <a href="/filtro/list">
+            <a href="/">
               <img
                 src={`${process.env.PUBLIC_URL}/static/labeler/img/logo_lyra_branco.png`}
                 alt="Logo Lyra"
