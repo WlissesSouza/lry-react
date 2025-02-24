@@ -23,7 +23,7 @@ const ConsultaList: React.FC = () => {
     <div className="row p-3 h-100" style={{height:" 90vH"}}>
       <div className="col-sm-12" >
         <div className="panel bg-transparent">
-          <div className="panel-body p-t-0" style={{height:" 90vH"}}>
+          <div className="panel-body p-t-0" >
             <div className="row">
               <div className="col-12">
                 <ul className="nav nav-tabs" role="tablist">
@@ -90,6 +90,13 @@ const ConsultaList: React.FC = () => {
 
             {/* Passa o texto de pesquisa para o componente ConsultasTable */}
             <ConsultasTable searchText={searchText} />
+          </div>
+          <div className="col-12 ml-0 pl-0  mt-4">
+            <div className="col-sm-12 mt-0 pl-0 mt-6">
+                <a className="btn btn-light btn-sm  p-l-30 p-r-30 border"
+                    href="/">Lixeira
+                    <i className="fa fa-trash"></i></a>
+            </div>
           </div>
         </div>
       </div>

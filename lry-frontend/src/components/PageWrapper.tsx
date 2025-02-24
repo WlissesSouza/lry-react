@@ -63,7 +63,7 @@ const PageWrapper: React.FC<PageWrapperProps> = ({ children, filtrosPendentes, m
         <div className="cssload-speeding-wheel"></div>
       </div>
       <TopMenu showBackButton={false} />
-      <div className="page-wrapper" >
+      <div style={{height:"99vH"}} >
         <div className="container-fluid p-t-0 m-r-1">
           <PageHeadingText title={title || ""} />
           <div>{children}</div>

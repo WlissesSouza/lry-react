@@ -207,6 +207,13 @@ const ConsultasTable: React.FC<ConsultasTableProps> = ({ searchText }) => {
               </tr>
             </thead>
           </table>
+          <div className="col-12 ml-0 pl-0  mt-4">
+            <div className="col-sm-12 mt-0 pl-0 mt-6">
+                <a className="btn btn-light btn-sm  p-l-30 p-r-30 border"
+                    href="/">Lixeira
+                    <i className="fa fa-trash"></i></a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -224,8 +231,16 @@ const ConsultasTable: React.FC<ConsultasTableProps> = ({ searchText }) => {
               </tr>
             </thead>
           </table>
+          <div className="col-12 ml-0 pl-0  mt-4">
+            <div className="col-sm-12 mt-0 pl-0 mt-6">
+                <a className="btn btn-light btn-sm  p-l-30 p-r-30 border"
+                    href="/">Lixeira
+                    <i className="fa fa-trash"></i></a>
+            </div>
+          </div>
         </div>
       </div>
+      
     </div>
   );
 };
