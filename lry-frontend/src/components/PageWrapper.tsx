@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import TopMenu from "./TopMenu.tsx";
-import SideMenu from "./SideMenu.tsx";
-import ModalFiltrosPendentes from "./ModalFiltrosPendentes.tsx";
+import TopMenu from "./TopMenu";
+import SideMenu from "./SideMenu";
+import ModalFiltrosPendentes from "./ModalFiltrosPendentes";
 import toastr from "toastr";
-import PageHeadingText from "../components/PageHeadingText.tsx";
+import PageHeadingText from "../components/PageHeadingText";
 
 // Tipagem das mensagens do Toastr
 interface Message {
@@ -63,8 +63,8 @@ const PageWrapper: React.FC<PageWrapperProps> = ({ children, filtrosPendentes, m
         <div className="cssload-speeding-wheel"></div>
       </div>
       <TopMenu showBackButton={false} />
-      <div className="page-wrapper" style={{ overflowX: "hidden" }}>
-        <div className="container-fluid p-t-0 p-r-0">
+      <div className="page-wrapper" >
+        <div className="container-fluid p-t-0 m-r-1">
           <PageHeadingText title={title || ""} />
           <div>{children}</div>
         </div>

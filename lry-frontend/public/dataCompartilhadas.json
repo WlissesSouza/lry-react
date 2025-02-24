@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "nome": "Consulta 1",
+    "categorias": ["Teste"],
+    "quantidade_atual": 50,
+    "total_processos_arquivo": 100,
+    "situacao": "Em progresso",
+    "ultima_execucao": "2025-02-13T10:00:00Z"
+  }
+]

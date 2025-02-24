@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "jquery"; // Importa o jQuery
 import "popper.js"; // Importa o Popper.js
-import ConsultasTable from "../components/DataTables.tsx";
+import ConsultasTable from "../components/DataTables";
 
 // Tipagem do componente ConsultaList
 const ConsultaList: React.FC = () => {
@@ -21,7 +21,7 @@ const ConsultaList: React.FC = () => {
 
   return (
     <div className="row p-3">
-      <div className="col-sm-12">
+      <div className="col-sm-12" >
         <div className="panel bg-transparent">
           <div className="panel-body p-t-0">
             <div className="row">
